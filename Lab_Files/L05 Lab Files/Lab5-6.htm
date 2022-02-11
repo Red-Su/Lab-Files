@@ -8,7 +8,26 @@
 function switchTest(SetOption) {
 OptionsSelect = document.frmOne.SetOption.value
 
-alert(OptionsSelect);
+
+switch (OptionsSelect) {
+    case "1":
+        alert("Phoenix");
+        break;
+    case "2":
+        alert("Roswell");
+        break;
+    case "3":
+        alert("Sacramento");
+        break;
+    case "4":
+        alert("My city");
+        break;
+    case "5":
+        alert("Your city");
+        break;
+    default:
+        alert("Does not exist.")
+}
 
 }
 </script>
