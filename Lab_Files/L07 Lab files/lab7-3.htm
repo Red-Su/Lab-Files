@@ -5,11 +5,15 @@
 <title>Lab 7-3</title>
 
 <script type="text/javascript">
-<!--
+
 var str = "Mark, Pete, Emily, Adam";
 
-// Your code here
-
+// Your code here;
+var removeComma = str.replace(/,/g, "");
+var replacePete = str.replace(/Pete/g, "Betsy")
+console.log(removeComma);
+console.log(replacePete);
+console.log(str.search("Emily"))
 //-->
 </script>
 </head>

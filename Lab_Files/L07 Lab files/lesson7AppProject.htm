@@ -5,7 +5,7 @@
 <title>Lesson 7 Application Project A</title>
 
 <script type=text/javascript>
-<!--
+
     /***************************************************************************** 
     The placeholders sub and string are used to pass as arguments the 
     user's entry into the text box and the textarea.  The variable where 
@@ -15,8 +15,17 @@
     Since the string is zero based, add 1 is to get the correct position of sub.
     *****************************************************************************/
 
+    // var string = 'asfalkjfsub'
+    // var lol = /sub/
+    // document.write(lol.test(string));
+
     function search(sub, string) {
-        var where;
+        if (string.search(sub) == -1) {
+            alert("This string does not exist in the text")
+        } else {
+            alert("The string was found in position " + string.search(sub));
+        }
+
          
 
 
