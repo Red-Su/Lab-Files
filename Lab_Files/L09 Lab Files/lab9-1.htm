@@ -5,7 +5,7 @@
 <title>Lab 9-1</title>
 
 <script type="text/javascript">
-<!--
+
 function changeButton()
 {
   if(document.getElementById('radiobuttonWebdev').checked === true)
@@ -20,9 +20,22 @@ function changeButton()
 	var header = document.getElementById('radiobuttonWebdev').value.innerHTML = "Uncle Sam!";
 	alert("Hello " + header);
   }
+  if(document.getElementById('radiobuttonGames').checked === true)
+  {
+	radioButton = document.getElementById('radiobuttonGames').value;
+  }
+  if(document.getElementById('radiobuttonFF14').checked === true)
+  {
+	radioButton = document.getElementById('radiobuttonFF14').value;
+  }
+  if(document.getElementById('classroom').checked === true)
+  {
+	radioButton = document.getElementById('classroom').value;
+  }
+  
   getTest();
 }
--->
+
 </script>
 </head>
 
@@ -33,13 +46,13 @@ function changeButton()
 <p>Please select your favorite type of Web site:</p>
 <input id="radiobuttonWebdev" type="radio" name="group1" value="Web_Development" checked>Web Development</input><br />
 <input id="radiobuttonGovernment" type="radio" name="group1" value="Government">U.S. Government</input><br />
-<input id="a" type="radio" name="group1" value="A">A</input><br />
-<input id="b" type="radio" name="group1" value="B">B</input><br />
-<input id="c" type="radio" name="group1" value="C">C</input><br />
+<input id="radiobuttonGames" type="radio" name="group1" value="Games_Workshop">Games Workshop</input><br />
+<input id="radiobuttonFF14" type="radio" name="group1" value="FF14">Final Fantasy 14</input><br />
+<input id="classroom" type="radio" name="group1" value="Classroom">Classroom</input><br />
 
 
 <script type="text/javascript">
-<!--
+
 function getTest()
 {
   document.write("<h3>CIW JavaScript Specialist</h3>");
@@ -54,8 +67,20 @@ function getTest()
   {
 	document.write("<p>Here's a great site if you're interested in U.S. government:</p><a href=http://www.whitehouse.gov/>The White House</a>");
   }
+  if(radioButton == "Games_Workshop")
+  {
+	document.write("<p>Here's a great site if you're interested in Warhammer 40k:</p><a href=https://www.games-workshop.com/Home>Games Workshop</a>");
+  }
+  if(radioButton == "FF14")
+  {
+  document.write("<p>Here's a great site if you're interested in Final Fantasy 14:</p><a href=https://ffxiv.consolegameswiki.com/wiki/FF14_Wiki>Final Fantasy 14</a>");
+  }
+  if(radioButton == "Classroom")
+  {
+  document.write("<p>Here's a great site if you're interested in Classroom:</p><a href=https://classroom.google.com/>Classroom</a>");
+  }
 }
--->
+
 </script>
 
 <p>
