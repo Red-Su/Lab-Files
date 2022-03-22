@@ -14,7 +14,7 @@
     <input type="text" placeholder="FirstName" name="fname" required> 
 	<input type="text" placeholder="LastName" name="lname" required> <br />
 	<label><b>Address</b></label>
-	<textarea rows="5" cols="40">Enter your address here.</textarea> <br />
+	<textarea rows="10" cols="40" id="tarea" onclick="removeText()" onblur="addText();">Enter your address here.</textarea> <br />
 	<label><b>EMail</b></label>
 	<input type="text" placeholder="Enter Email ID" name="email" required> <br />
     <label><b>Password</b></label>
@@ -24,6 +24,20 @@
 	<input type="radio" name="gen" value="female">Female <br />
     <input type="submit">
     <input type="reset">
+	<script>
+		document.getElementById("tarea").style.resize = "none";
+		function removeText () {
+			if (document.getElementById("tarea").value == 'Enter your address here.') {
+				document.getElementById("tarea").value = '';
+			}
+
+		}
+		function addText() {
+			if (document.getElementById("tarea").value == '') {
+				document.getElementById("tarea").value = 'Enter your address here.';
+			}
+		}
+	</script>
 </form>
 </body>
 </html>

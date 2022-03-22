@@ -13,15 +13,31 @@
 	<label><b>Name</b></label>
     <input type="text" placeholder="FirstName" name="fname" required> 
 	<input type="text" placeholder="LastName" name="lname" required> <br />
-	 <label><b>EMail</b></label>
+	 <label><b>Email</b></label>
 	<input type="text" placeholder="Enter Email ID" name="email" required> <br />
     <label><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="pwd" required maxLength="10"> <br />
 	 <label><b>Gender</b></label>
     <input type="radio" name="gen" value="male">Male
 	<input type="radio" name="gen" value="female">Female <br />
-    <input type="submit">
+    <input type="submit" onclick="alertForm();">
     <input type="reset">
 </form>
+<script>
+    function alertForm () {
+        var len = document.forms[0].length - 4;
+        var outcome = "";
+        for (let i = 0; len > i; i++) {
+            outcome += document.forms[0].elements[i].placeholder + " = " + document.forms[0].elements[i].value + "\n"; 
+        }
+        if (document.forms[0].elements[4].checked) {
+            outcome += document.forms[0].elements[4].name + " = " + document.forms[0].elements[4].value + "\n"; 
+        } else if (document.forms[0].elements[5].checked) {
+            outcome += document.forms[0].elements[5].name + " = " + document.forms[0].elements[5].value + "\n"; 
+        }
+        alert(outcome);
+    }
+
+</script>
 </body>
 </html>

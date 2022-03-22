@@ -5,19 +5,31 @@
 <title>Lesson 10 Application Project</title>
 
 <script type="text/javascript">
-<!--
+
 
 
     function validate(form) {
-
-
-
-
-
-
-
-
-
+        for (let i = 0; 3 > i; i++) {
+            if (document.ccForm.elements[i].checked) {
+            var card = i;
+            } 
+        }
+        if (card == 0) {
+           var visa = document.getElementById("number").value.includes("4", 0);
+           if (visa == false || document.getElementById("number").value.length !== 16) {
+               alert("Change your card number")
+           }
+        } else if (card == 1) {
+            var mc = document.getElementById("number").value.includes("5", 0);
+            if (mc == false || document.getElementById("number").value.length !== 16) {
+               alert("Change your card number")
+           }
+        } else if (card == 2) {
+            var amex = document.getElementById("number").value.includes("3", 0);
+            if (amex == false || document.getElementById("number").value.length !== 15) {
+               alert("Change your card number")
+           }
+        }
     }
 
   
@@ -46,7 +58,7 @@ American Express
 </p>
 <p>
 Card # 
-<input type="text" name="number" />
+<input type="text" name="number" id="number"/>
 </p>
 <p>
 Exp Date: 
