@@ -25,12 +25,17 @@
 						required: true,
 						minlength: 2
 					},
+					url: {
+						required: true,
+						url: true
+					},
 				},
 				//set messages to appear inline
 				messages: {
 					name: "Please enter your name",
 					email: "Please enter a valid e-mail address",
-					message: "Please enter your comment"
+					message: "Please enter your comment",
+					url: "Please enter a valid URL"
 				}
 			});
 		});
